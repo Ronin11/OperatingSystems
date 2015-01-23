@@ -1,0 +1,15 @@
+template <typename Container>
+
+	typename Container:Value x;
+
+
+Lambda Expression
+[R](args){return something}
+
+for(auto&& e : Container){
+	do e;
+}
+
+
+std::vector <double> times(20);
+std::generate(times.begin, times.end, [](){time f});

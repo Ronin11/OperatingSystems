@@ -1,0 +1,33 @@
+template<typename F>
+std::chrono::duration<double> timeFunc(F const & f)
+{
+	auto start = std::chrono::system_clock::now();
+	f();
+	auto stop = std::chrono::system_clock::now();
+	return stop - start;
+}
+/** Call this function like: 
+a = 2;
+b = 3;
+auto duration = timeFunc([a,b](){foo(a,b);});
+**/
+
+template<typname Container>
+typename Container::value_type
+average(Container const & c)
+{
+	auto sum = std::accumulate(c.cbegin(), c.cend(),typename Container::value_type(),[](typename Container::value_type a,typename Container::value_type b){return a+b});
+	return sum/c.size();
+}
+
+template<typename F>
+std::pair<std::chrono::duration<double>,std::chrono::duration<double>> stdDevTimeFunc(int iterations, F const & f)
+{
+	std::vector<std::chrono::duration<double>> times(iterations);
+	std::generate(times.begin(),times.end(),[](){timeFunc(f);});
+	auto avg = average(times);
+	std::transform(times.begin(),times.end(),times.begin(),[=](std::chrono::duration<double> a)){return (a - avg)*(a - avg);});
+	auto stddev = std::sqrt(std::accumulate(times.begin(), times.end);
+
+	return std::make_pair(avg,stddev);
+}

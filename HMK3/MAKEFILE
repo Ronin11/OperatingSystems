@@ -1,0 +1,24 @@
+CC = g++
+CFLAGS = -std=c++11
+LDFLAGS = 
+SOURCES = main.cpp
+INCLUDES = ppm.h complex.h timer.h
+OBJECTS = $(SOURCES:.cpp=.o)
+LIBS = 
+EXECUTABLE = HMK3
+
+#all: $(EXECUTABLE)
+
+$(EXECUTABLE): 
+	$(CC) $(CFLAGS) $(SOURCES) $(INCLUDES)
+
+
+
+#$(EXECUTABLE): $(OBJECTS)
+#	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+
+#.cpp.o:
+#	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+#clean:
+#	rm -rf *o HMK3

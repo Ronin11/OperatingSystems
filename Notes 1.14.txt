@@ -1,0 +1,2 @@
+auto p = std::make_shared<widget>(....)
+std::unique_ptr<widget>(new Widget());

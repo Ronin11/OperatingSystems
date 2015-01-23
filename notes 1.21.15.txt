@@ -1,0 +1,20 @@
+#include <thread>
+
+auto t = std::thread([](){});
+
+t.join();
+
+
+std::vector<std::thread> threadpool(n);
+std::generate(threadpool.begin(),threadpool.end(),[](){return std::thread(function());});
+
+for(auto&& t:threadpool){t.join();}
+
+#include <mutex>
+
+std::mutex m;
+
+{
+std::lock_guard l(m);
+
+}
