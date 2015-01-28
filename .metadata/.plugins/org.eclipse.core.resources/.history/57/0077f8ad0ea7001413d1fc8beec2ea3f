@@ -1,0 +1,14 @@
+#include <unistd.h>
+
+int main(void){
+        auto pid = fork();
+        if(pid < 0)
+                cerr << "Could not fork" << std::endl;
+        if(pid == 0)
+                std::cout << "This is the child" << std::endl;
+        else{
+                waitpid(pid, nullptr, 0);
+                std::cout << "This is the parent of child " << pid << std::endl;
+        }
+
+}
