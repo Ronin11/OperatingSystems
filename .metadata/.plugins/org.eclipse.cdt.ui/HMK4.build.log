@@ -1,7 +1,20 @@
-13:32:04 **** Clean-only build of configuration Debug for project HMK4 ****
-make clean 
-rm -rf  ./src/main.o  ./src/main.d  HMK4
- 
+22:04:08 **** Incremental Build of configuration Debug for project HMK4 ****
+make all 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:26:4: warning: identifier ‘nullptr’ is a keyword in C++11 [-Wc++0x-compat]
+../src/main.cpp: In function ‘int main(int, char**)’:
+../src/main.cpp:18:3: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/main.cpp:18:8: error: ‘pid’ does not name a type
+../src/main.cpp:19:6: error: ‘pid’ was not declared in this scope
+../src/main.cpp:22:7: error: ‘pid’ was not declared in this scope
+../src/main.cpp:26:18: error: ‘nullptr’ was not declared in this scope
+../src/main.cpp:33:11: error: ‘pid’ was not declared in this scope
+../src/main.cpp:33:16: error: ‘nullptr’ was not declared in this scope
+../src/main.cpp:17:7: warning: unused variable ‘status’ [-Wunused-variable]
+../src/main.cpp:13:7: warning: unused variable ‘input’ [-Wunused-variable]
+make: *** [src/main.o] Error 1
 
-13:32:05 Build Finished (took 55ms)
+22:04:09 Build Finished (took 311ms)
 

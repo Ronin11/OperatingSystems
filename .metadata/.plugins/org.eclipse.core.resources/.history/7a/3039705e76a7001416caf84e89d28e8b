@@ -6,7 +6,6 @@
 #include <sys/wait.h>
 #include <string>
 #include "terminal.h"
-#include "timer.h"
 
 using namespace std;
 
@@ -16,9 +15,7 @@ int main(int argc, char **argv) {
 		std::cout << "RoninShell->>> ";
 		std::string line = "stuff";
 		std::getline(std::cin,line);
-		std::vector<std::string> data = parse(line);
-		for(std::string s : data)
-			std::cout << s << std::endl;
+		int status;
 		auto pid = fork();
 		if(pid < 0){
 			cerr << "Could not fork " << std::endl;
@@ -29,7 +26,7 @@ int main(int argc, char **argv) {
 			arg.push_back(strdup(line.c_str())); //need to pass in the first command
 			arg.push_back(nullptr); //terminate with nullptr
 
-			execvp("ls", arg.data());
+			execvp("ls -a", arg.data());
 		} else {
 			std::cout << "parent " << pid << std::endl;
 		}

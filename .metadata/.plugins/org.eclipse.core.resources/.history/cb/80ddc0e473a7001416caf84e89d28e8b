@@ -5,20 +5,17 @@
 #include <string>
 #include <sys/wait.h>
 #include <string>
+#include <stdio.h>
 #include "terminal.h"
-#include "timer.h"
 
 using namespace std;
 
 int main(int argc, char **argv) {
 	char input[1024];
 	while(true){
-		std::cout << "RoninShell->>> ";
-		std::string line = "stuff";
-		std::getline(std::cin,line);
-		std::vector<std::string> data = parse(line);
-		for(std::string s : data)
-			std::cout << s << std::endl;
+		auto line = "stuff";
+		gets(input);
+		int status;
 		auto pid = fork();
 		if(pid < 0){
 			cerr << "Could not fork " << std::endl;

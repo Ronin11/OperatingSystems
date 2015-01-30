@@ -6,7 +6,6 @@
 #include <sys/wait.h>
 #include <string>
 #include "terminal.h"
-#include "timer.h"
 
 using namespace std;
 
