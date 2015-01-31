@@ -1,20 +1,40 @@
-22:04:08 **** Incremental Build of configuration Debug for project HMK4 ****
+13:13:39 **** Incremental Build of configuration Debug for project HMK4 ****
 make all 
 Building file: ../src/main.cpp
 Invoking: GCC C++ Compiler
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
-../src/main.cpp:26:4: warning: identifier ‘nullptr’ is a keyword in C++11 [-Wc++0x-compat]
+In file included from /usr/include/c++/4.7/chrono:35:0,
+                 from ../src/main.cpp:8:
+/usr/include/c++/4.7/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
+../src/main.cpp:80:5: warning: identifier ‘nullptr’ is a keyword in C++11 [-Wc++0x-compat]
 ../src/main.cpp: In function ‘int main(int, char**)’:
-../src/main.cpp:18:3: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:18:8: error: ‘pid’ does not name a type
-../src/main.cpp:19:6: error: ‘pid’ was not declared in this scope
-../src/main.cpp:22:7: error: ‘pid’ was not declared in this scope
-../src/main.cpp:26:18: error: ‘nullptr’ was not declared in this scope
-../src/main.cpp:33:11: error: ‘pid’ was not declared in this scope
-../src/main.cpp:33:16: error: ‘nullptr’ was not declared in this scope
-../src/main.cpp:17:7: warning: unused variable ‘status’ [-Wunused-variable]
-../src/main.cpp:13:7: warning: unused variable ‘input’ [-Wunused-variable]
+../src/main.cpp:18:10: error: ‘chrono’ in namespace ‘std’ does not name a type
+../src/main.cpp:30:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/main.cpp:38:7: error: ‘stoi’ is not a member of ‘std’
+../src/main.cpp:38:47: error: ‘stoi’ is not a member of ‘std’
+../src/main.cpp:39:31: error: ‘stoi’ is not a member of ‘std’
+../src/main.cpp:48:16: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
+../src/main.cpp:49:18: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
+../src/main.cpp:50:18: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
+../src/main.cpp:58:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/main.cpp:58:9: error: ‘start’ does not name a type
+../src/main.cpp:59:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/main.cpp:59:9: error: ‘pid’ does not name a type
+../src/main.cpp:60:7: error: ‘pid’ was not declared in this scope
+../src/main.cpp:63:8: error: ‘pid’ was not declared in this scope
+../src/main.cpp:64:48: error: in C++98 ‘args’ must be initialized by constructor, not by ‘{...}’
+../src/main.cpp:64:48: error: could not convert ‘{"ls", "-l", 0l}’ from ‘<brace-enclosed initializer list>’ to ‘std::vector<char*>’
+../src/main.cpp:77:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/main.cpp:80:19: error: ‘nullptr’ was not declared in this scope
+../src/main.cpp:81:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/main.cpp:89:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/main.cpp:94:12: error: ‘pid’ was not declared in this scope
+../src/main.cpp:94:17: error: ‘nullptr’ was not declared in this scope
+../src/main.cpp:95:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/main.cpp:95:9: error: ‘stop’ does not name a type
+../src/main.cpp:96:12: error: ‘stop’ was not declared in this scope
+../src/main.cpp:96:19: error: ‘start’ was not declared in this scope
 make: *** [src/main.o] Error 1
 
-22:04:09 Build Finished (took 311ms)
+13:13:39 Build Finished (took 206ms)
 

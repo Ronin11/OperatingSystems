@@ -1,0 +1,7 @@
+	Init --v		Terminated     PCB(Process Control Blocks)
+	    Ready --> <-- Exec --^		Registers- SP & IC
+	      ^-- wait <-- v			Code Page(s)
+						Data Page(s)
+
+	
+
