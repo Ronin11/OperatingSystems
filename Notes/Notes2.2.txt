@@ -1,0 +1,29 @@
+int p[2];
+pipe(p);
+fork();
+
+dup2(old, new);
+dup2(STDIN,p[1]);
+
+//Open to file, Do this in child process
+auto file = fopen(....);
+dup2(STDOUT,file);
+
+
+/**
+parse
+|
+v
+pipe
+| -> dup2 -> exec(foo)
+V
+wait
+| -> dup2 -> exec(bar)
+V
+wait
+|
+V
+loop
+
+
+**/
