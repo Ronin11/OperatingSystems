@@ -1,0 +1,41 @@
+1 Page of notes for the exam next Friday.
+
+Use dup2 after the fork
+
+int main(void){
+	//std::string line;
+	//std::getline(std::cin,line);
+
+	int toParent[2];
+	int toChild[2];
+	pipe(toParent);
+	pipe(toChild);
+	
+	auto pid = fork();
+	if(pid < 0)
+		std::cerr<<"Could not fork" << std::endl;
+
+	if(pid == 0){
+		close(toParent[0]);
+		close(toChild[0]);
+		//write(toParent[1],"Hello World\n",14);
+
+		dup2(1,toParent[1]);
+		std::cout << "Hello World" << std::endl;
+		close(toParent[1]);
+		char c;
+		while(read(toChild[0], &c, 1)
+			std::cout << c;
+	}else{
+	
+		close(toParent[1]);
+		close(toChild[0]);
+		//waitpid(pid,nullptr,0);
+		char c;
+		while(read(p[0],&c,1){
+			std::cout << c;
+		}
+		write(toChild[1],"Hello Child\n",13);
+		close(toChild[1]);
+	}
+}
