@@ -65,31 +65,30 @@ void ptime(std::chrono::microseconds *time){
 
 }
 
-void fun(int pipe[2]){
-	close(pipe[0]);
-	write(pipe[1],"Hello Children\n",16);
-	close(pipe[1]);
-}
-
 void redirection_recursion(std::vector<std::string> data, int output[2]){
 	int input_new[2];
 	pipe(input_new);
 	std::vector<std::string> data_args = data;
 	int def_out = dup(1);
+	int def_in = dup(0);
 
 	if(switchVal(data) != 4){
-		auto pid = fork();
+
 		close(input_new[1]);
 		close(input_new[0]);
-		close(output[0]);
-		dup2(output[1], 1);	
+		auto pid = fork();
 		if(pid < 0)
 			std::cerr << "Could not fork" << std::endl;
-		if(pid == 0)
+		if(pid == 0){
+			dup2(output[0], 0);
+			dup2(output[1], 1);	
 			child_execute(data);
+			dup2(def_out, 1);
+			dup2(def_in, 0);
+		}
 		waitpid(pid, nullptr, 0);
 		close(output[1]);
-		dup2(def_out, 1);
+		close(output[0]);
 		exit(0);
 	}
 
@@ -101,69 +100,65 @@ void redirection_recursion(std::vector<std::string> data, int output[2]){
 					std::cerr << "Could not fork" << std::endl;
 				if(pid == 0){
 						close(input_new[1]);
-						auto file = open(data[i+1].c_str(), "r");
-						dup2(file, 0);					
-						char c;
-						while(read(input_new[0], &c, 1))
-							std::cout << c;
-						close(input_new[0]);
-						dup2(def_out, 0);
-				}
-				else{
-					data_args.erase(data_args.begin()+i+1);
-					data_args.erase(data_args.begin()+i);
-					redirection_recursion(data_args, input_new);
-				}
+						auto file = open(data[i+1].c_str(), O_RDONLY, S_IRUSR);
+						dup2(file, input_new[0]);
+						dup2(output[1], input_new[1]);
+						data_args.erase(data_args.begin()+i+1);
+						data_args.erase(data_args.begin()+i);
+						redirection_recursion(data_args, input_new);		
+						close(file);
+						close(input_new[0]);	
+					}
 				waitpid(pid, nullptr, 0);
 				exit(0);
 			}
+
 			else if(data[i] == ">"){
 				auto pid = fork();
 				if(pid < 0)
 					std::cerr << "Could not fork" << std::endl;
 				if(pid == 0){
-						close(input_new[1]);
-						auto file = open(data[i+1].c_str(), O_RDWR | O_TRUNC | O_CREAT, S_IRUSR | S_IWUSR);
-						dup2(file, 1);					
-						char c;
-						while(read(input_new[0], &c, 1))
-							std::cout << c;
 						close(input_new[0]);
-						dup2(def_out, 1);
-				}
-				else{
-					data_args.erase(data_args.begin()+i+1);
-					data_args.erase(data_args.begin()+i);
-					redirection_recursion(data_args, input_new);
+						auto file = open(data[i+1].c_str(), O_RDWR | O_TRUNC | O_CREAT, S_IWUSR);
+						dup2(file, input_new[1]);		
+						data_args.erase(data_args.begin()+i+1);
+						data_args.erase(data_args.begin()+i);
+						redirection_recursion(data_args, input_new);		
+						close(file);
+						close(input_new[1]);
 				}
 				waitpid(pid, nullptr, 0);
 				exit(0);
 			}
+
 			else if(data[i] == "|"){
-			/*	auto pid = fork();
+				auto pid = fork();
 				if(pid < 0)
 					std::cerr << "Could not fork" << std::endl;
 				if(pid == 0){
 						close(input_new[1]);
-						dup2(output[1], 1);	
+						close(output[0]);
+						dup2(output[1], 1);
+						dup2(input_new[0], 0);
+						data_args.erase(data_args.begin()+i+1);
+						data_args.erase(data_args.begin()+i);
+						redirection_recursion(data_args, input_new);
 						auto pid = fork();
 						if(pid < 0)
 							std::cerr << "Could not fork" << std::endl;
-						if(pid == 0)
-							child_execute(data[i+1]);	
-						char c;
-						while(read(input_new[0], &c, 1))
-							std::cout << c;
-						close(input_new[0]);
-						dup2(def_out, 1);
-				}
-				else{
-					data_args.erase(data_args.begin()+i+1);
-					data_args.erase(data_args.begin()+i);
-					redirection_recursion(data_args, input_new);
+						if(pid == 0){
+							std::vector<std::string> temp;
+							temp.push_back(data[i+1]);
+							child_execute(temp);	
+							close(input_new[0]);
+							close(output[1]);
+							dup2(def_out, 1);
+							dup2(def_in, 0);
+						}
+					waitpid(pid, nullptr, 0);
 				}
 				waitpid(pid, nullptr, 0);
-				*/
+				exit(0);
 			}
 		}
 }
@@ -177,6 +172,8 @@ void redirection(std::vector<std::string> data, std::vector<std::string> *histor
 	if (pid == 0){
 		int output[2];
 		pipe(output);
+		dup2(dup(0),output[0]);
+		dup2(dup(1),output[1]);
 		redirection_recursion(data, output);
 	}
 	//Add Command to History

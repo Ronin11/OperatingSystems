@@ -1,139 +1,90 @@
-21:08:15 **** Incremental Build of configuration Debug for project HMK4 ****
+20:12:43 **** Incremental Build of configuration Debug for project suckmydick ****
 make all 
-Building file: ../src/main.cpp
+Building file: ../src/suckmydick.cpp
 Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/suckmydick.d" -MT"src/suckmydick.d" -o "src/suckmydick.o" "../src/suckmydick.cpp"
 In file included from /usr/include/c++/4.7/chrono:35:0,
-                 from ../src/main.cpp:8:
+                 from ../src/suckmydick.cpp:9:
 /usr/include/c++/4.7/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
-../src/main.cpp:70:5: warning: identifier ‘nullptr’ is a keyword in C++11 [-Wc++0x-compat]
-../src/main.cpp: In function ‘int main(int, char**)’:
-../src/main.cpp:20:10: error: ‘chrono’ in namespace ‘std’ does not name a type
-../src/main.cpp:32:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:40:7: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:40:47: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:41:31: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:50:16: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:51:18: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:52:18: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:60:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:60:9: error: ‘start’ does not name a type
-../src/main.cpp:61:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:61:9: error: ‘pid’ does not name a type
-../src/main.cpp:62:7: error: ‘pid’ was not declared in this scope
-../src/main.cpp:65:8: error: ‘pid’ was not declared in this scope
-../src/main.cpp:68:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:70:20: error: ‘nullptr’ was not declared in this scope
-../src/main.cpp:77:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:82:12: error: ‘pid’ was not declared in this scope
-../src/main.cpp:82:17: error: ‘nullptr’ was not declared in this scope
-../src/main.cpp:83:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:83:9: error: ‘stop’ does not name a type
-../src/main.cpp:84:12: error: ‘stop’ was not declared in this scope
-../src/main.cpp:84:19: error: ‘start’ was not declared in this scope
-make: *** [src/main.o] Error 1
-21:08:17 **** Incremental Build of configuration Debug for project HMK4 ****
-make all 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
-In file included from /usr/include/c++/4.7/chrono:35:0,
-                 from ../src/main.cpp:8:
-/usr/include/c++/4.7/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
-../src/main.cpp:70:5: warning: identifier ‘nullptr’ is a keyword in C++11 [-Wc++0x-compat]
-../src/main.cpp: In function ‘int main(int, char**)’:
-../src/main.cpp:20:10: error: ‘chrono’ in namespace ‘std’ does not name a type
-../src/main.cpp:32:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:40:7: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:40:47: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:41:31: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:50:16: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:51:18: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:52:18: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:60:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:60:9: error: ‘start’ does not name a type
-../src/main.cpp:61:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:61:9: error: ‘pid’ does not name a type
-../src/main.cpp:62:7: error: ‘pid’ was not declared in this scope
-../src/main.cpp:65:8: error: ‘pid’ was not declared in this scope
-../src/main.cpp:68:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:70:20: error: ‘nullptr’ was not declared in this scope
-../src/main.cpp:77:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:82:12: error: ‘pid’ was not declared in this scope
-../src/main.cpp:82:17: error: ‘nullptr’ was not declared in this scope
-../src/main.cpp:83:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:83:9: error: ‘stop’ does not name a type
-../src/main.cpp:84:12: error: ‘stop’ was not declared in this scope
-../src/main.cpp:84:19: error: ‘start’ was not declared in this scope
-make: *** [src/main.o] Error 1
-21:08:40 **** Incremental Build of configuration Debug for project HMK4 ****
-make all 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
-In file included from /usr/include/c++/4.7/chrono:35:0,
-                 from ../src/main.cpp:8:
-/usr/include/c++/4.7/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
-../src/main.cpp:70:5: warning: identifier ‘nullptr’ is a keyword in C++11 [-Wc++0x-compat]
-../src/main.cpp: In function ‘int main(int, char**)’:
-../src/main.cpp:20:10: error: ‘chrono’ in namespace ‘std’ does not name a type
-../src/main.cpp:32:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:40:7: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:40:47: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:41:31: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:50:16: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:51:18: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:52:18: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:60:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:60:9: error: ‘start’ does not name a type
-../src/main.cpp:61:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:61:9: error: ‘pid’ does not name a type
-../src/main.cpp:62:7: error: ‘pid’ was not declared in this scope
-../src/main.cpp:65:8: error: ‘pid’ was not declared in this scope
-../src/main.cpp:68:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:70:20: error: ‘nullptr’ was not declared in this scope
-../src/main.cpp:77:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:82:12: error: ‘pid’ was not declared in this scope
-../src/main.cpp:82:17: error: ‘nullptr’ was not declared in this scope
-../src/main.cpp:83:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:83:9: error: ‘stop’ does not name a type
-../src/main.cpp:84:12: error: ‘stop’ was not declared in this scope
-../src/main.cpp:84:19: error: ‘start’ was not declared in this scope
-make: *** [src/main.o] Error 1
-13:13:39 **** Incremental Build of configuration Debug for project HMK4 ****
-make all 
-Building file: ../src/main.cpp
-Invoking: GCC C++ Compiler
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
-In file included from /usr/include/c++/4.7/chrono:35:0,
-                 from ../src/main.cpp:8:
-/usr/include/c++/4.7/bits/c++0x_warning.h:32:2: error: #error This file requires compiler and library support for the ISO C++ 2011 standard. This support is currently experimental, and must be enabled with the -std=c++11 or -std=gnu++11 compiler options.
-../src/main.cpp:80:5: warning: identifier ‘nullptr’ is a keyword in C++11 [-Wc++0x-compat]
-../src/main.cpp: In function ‘int main(int, char**)’:
-../src/main.cpp:18:10: error: ‘chrono’ in namespace ‘std’ does not name a type
-../src/main.cpp:30:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:38:7: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:38:47: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:39:31: error: ‘stoi’ is not a member of ‘std’
-../src/main.cpp:48:16: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:49:18: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:50:18: error: request for member ‘count’ in ‘time’, which is of non-class type ‘time_t(time_t*)throw () {aka long int(long int*)throw ()}’
-../src/main.cpp:58:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:58:9: error: ‘start’ does not name a type
-../src/main.cpp:59:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:59:9: error: ‘pid’ does not name a type
-../src/main.cpp:60:7: error: ‘pid’ was not declared in this scope
-../src/main.cpp:63:8: error: ‘pid’ was not declared in this scope
-../src/main.cpp:64:48: error: in C++98 ‘args’ must be initialized by constructor, not by ‘{...}’
-../src/main.cpp:64:48: error: could not convert ‘{"ls", "-l", 0l}’ from ‘<brace-enclosed initializer list>’ to ‘std::vector<char*>’
-../src/main.cpp:77:34: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:80:19: error: ‘nullptr’ was not declared in this scope
-../src/main.cpp:81:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:89:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
-../src/main.cpp:94:12: error: ‘pid’ was not declared in this scope
-../src/main.cpp:94:17: error: ‘nullptr’ was not declared in this scope
-../src/main.cpp:95:4: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
-../src/main.cpp:95:9: error: ‘stop’ does not name a type
-../src/main.cpp:96:12: error: ‘stop’ was not declared in this scope
-../src/main.cpp:96:19: error: ‘start’ was not declared in this scope
-make: *** [src/main.o] Error 1
+../src/suckmydick.cpp:17:3: warning: identifier ‘nullptr’ is a keyword in C++11 [-Wc++0x-compat]
+In file included from ../src/suckmydick.cpp:11:0:
+../src/terminal.h:20:3: warning: anonymous type with no linkage used to declare variable ‘<anonymous struct> pipeData’ with linkage [enabled by default]
+../src/terminal.h: In function ‘int switchVal(std::vector<std::basic_string<char> >)’:
+../src/terminal.h:38:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/suckmydick.cpp: In function ‘void child_execute(std::vector<std::basic_string<char> >)’:
+../src/suckmydick.cpp:15:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/suckmydick.cpp:17:17: error: ‘nullptr’ was not declared in this scope
+../src/suckmydick.cpp: At global scope:
+../src/suckmydick.cpp:22:85: error: ‘std::chrono’ has not been declared
+../src/suckmydick.cpp:22:106: error: expected ‘,’ or ‘...’ before ‘*’ token
+../src/suckmydick.cpp: In function ‘void execute(std::vector<std::basic_string<char> >, std::vector<std::basic_string<char> >*, int)’:
+../src/suckmydick.cpp:23:2: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/suckmydick.cpp:23:7: error: ‘start’ does not name a type
+../src/suckmydick.cpp:24:2: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/suckmydick.cpp:24:7: error: ‘pid’ does not name a type
+../src/suckmydick.cpp:25:5: error: ‘pid’ was not declared in this scope
+../src/suckmydick.cpp:28:6: error: ‘pid’ was not declared in this scope
+../src/suckmydick.cpp:33:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/suckmydick.cpp:38:10: error: ‘pid’ was not declared in this scope
+../src/suckmydick.cpp:38:15: error: ‘nullptr’ was not declared in this scope
+../src/suckmydick.cpp:39:2: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/suckmydick.cpp:39:7: error: ‘stop’ does not name a type
+../src/suckmydick.cpp:40:11: error: ‘stop’ was not declared in this scope
+../src/suckmydick.cpp:40:18: error: ‘start’ was not declared in this scope
+../src/suckmydick.cpp: In function ‘void print_history(std::vector<std::basic_string<char> >*)’:
+../src/suckmydick.cpp:45:35: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/suckmydick.cpp: At global scope:
+../src/suckmydick.cpp:50:90: error: ‘std::chrono’ has not been declared
+../src/suckmydick.cpp:50:111: error: expected ‘,’ or ‘...’ before ‘*’ token
+../src/suckmydick.cpp: In function ‘void exec_history(std::vector<std::basic_string<char> >, std::vector<std::basic_string<char> >&, int)’:
+../src/suckmydick.cpp:51:5: error: ‘stoi’ is not a member of ‘std’
+../src/suckmydick.cpp:51:45: error: ‘stoi’ is not a member of ‘std’
+../src/suckmydick.cpp:52:30: error: ‘stoi’ is not a member of ‘std’
+../src/suckmydick.cpp: At global scope:
+../src/suckmydick.cpp:59:17: error: variable or field ‘ptime’ declared void
+../src/suckmydick.cpp:59:17: error: ‘std::chrono’ has not been declared
+../src/suckmydick.cpp: In function ‘void redirection_recursion(std::vector<std::basic_string<char> >)’:
+../src/suckmydick.cpp:75:5: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/suckmydick.cpp:75:10: error: ‘pid’ does not name a type
+../src/suckmydick.cpp:76:8: error: ‘pid’ was not declared in this scope
+../src/suckmydick.cpp:78:8: error: ‘pid’ was not declared in this scope
+../src/suckmydick.cpp:79:7: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/suckmydick.cpp:79:12: error: ‘file’ does not name a type
+../src/suckmydick.cpp:80:12: error: ‘file’ was not declared in this scope
+../src/suckmydick.cpp:85:21: error: ‘nullptr’ was not declared in this scope
+../src/suckmydick.cpp:89:13: error: ‘pid’ was not declared in this scope
+../src/suckmydick.cpp:89:18: error: ‘nullptr’ was not declared in this scope
+../src/suckmydick.cpp: At global scope:
+../src/suckmydick.cpp:97:89: error: ‘std::chrono’ has not been declared
+../src/suckmydick.cpp:97:110: error: expected ‘,’ or ‘...’ before ‘*’ token
+../src/suckmydick.cpp: In function ‘void redirection(std::vector<std::basic_string<char> >, std::vector<std::basic_string<char> >*, int)’:
+../src/suckmydick.cpp:98:2: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/suckmydick.cpp:98:7: error: ‘start’ does not name a type
+../src/suckmydick.cpp:99:2: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/suckmydick.cpp:99:7: error: ‘pid’ does not name a type
+../src/suckmydick.cpp:100:5: error: ‘pid’ was not declared in this scope
+../src/suckmydick.cpp:103:6: error: ‘pid’ was not declared in this scope
+../src/suckmydick.cpp:114:5: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/suckmydick.cpp:114:10: error: ‘pid’ does not name a type
+../src/suckmydick.cpp:118:7: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/suckmydick.cpp:118:12: error: ‘file’ does not name a type
+../src/suckmydick.cpp:119:12: error: ‘file’ was not declared in this scope
+../src/suckmydick.cpp:124:21: error: ‘nullptr’ was not declared in this scope
+../src/suckmydick.cpp:128:18: error: ‘nullptr’ was not declared in this scope
+../src/suckmydick.cpp:137:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../src/suckmydick.cpp:142:10: error: ‘pid’ was not declared in this scope
+../src/suckmydick.cpp:142:15: error: ‘nullptr’ was not declared in this scope
+../src/suckmydick.cpp:143:2: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+../src/suckmydick.cpp:143:7: error: ‘stop’ does not name a type
+../src/suckmydick.cpp:144:11: error: ‘stop’ was not declared in this scope
+../src/suckmydick.cpp:144:18: error: ‘start’ was not declared in this scope
+../src/suckmydick.cpp: In function ‘int main(int, char**)’:
+../src/suckmydick.cpp:154:10: error: ‘chrono’ in namespace ‘std’ does not name a type
+../src/suckmydick.cpp:172:35: error: invalid conversion from ‘time_t (*)(time_t*)throw () {aka long int (*)(long int*)throw ()}’ to ‘int’ [-fpermissive]
+../src/suckmydick.cpp:50:6: error:   initializing argument 3 of ‘void exec_history(std::vector<std::basic_string<char> >, std::vector<std::basic_string<char> >&, int)’ [-fpermissive]
+../src/suckmydick.cpp:178:15: error: ‘ptime’ was not declared in this scope
+../src/suckmydick.cpp:183:35: error: invalid conversion from ‘time_t (*)(time_t*)throw () {aka long int (*)(long int*)throw ()}’ to ‘int’ [-fpermissive]
+../src/suckmydick.cpp:97:6: error:   initializing argument 3 of ‘void redirection(std::vector<std::basic_string<char> >, std::vector<std::basic_string<char> >*, int)’ [-fpermissive]
+../src/suckmydick.cpp:189:31: error: invalid conversion from ‘time_t (*)(time_t*)throw () {aka long int (*)(long int*)throw ()}’ to ‘int’ [-fpermissive]
+../src/suckmydick.cpp:22:6: error:   initializing argument 3 of ‘void execute(std::vector<std::basic_string<char> >, std::vector<std::basic_string<char> >*, int)’ [-fpermissive]
+make: *** [src/suckmydick.o] Error 1

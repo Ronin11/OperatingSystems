@@ -1,0 +1,6 @@
+20:11:07 **** Incremental Build of configuration Default for project HMK5 ****
+make all 
+make: *** No rule to make target `all'.  Stop.
+
+20:11:07 Build Finished (took 55ms)
+
