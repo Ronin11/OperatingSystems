@@ -1,0 +1,18 @@
+Topics:
+
+Chapters 3 & 6 & 7 in the book
+
+C++11
+	-std algorithm + containers
+	-RAII (Resource Acquisition Is Initialization)
+	-lambdas
+
+Concurrency
+	-threads
+		auto t = std::thread([](){foo();});
+		t.join();
+	-processes
+		+ fork
+		+ lifetime
+		+ PID
+	-pitfalls
