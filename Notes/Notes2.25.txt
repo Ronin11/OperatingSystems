@@ -1,0 +1,9 @@
+Create an Event class that refers to a task
+Create a task class:
+	write timings into the class, start and end times.
+	contains burst of cpu and IO (Arbitrary numbers)
+	CPU contains duration and time left
+	IO contains duration and device (IO is significantly larger duration than CPU)
+
+Create an end simulation tag, at time 1000
+A wait set for device0 and device1

@@ -1,0 +1,44 @@
+#include <random>
+
+std::random_device rd;
+std::mt19937	mt(rd());
+std::uniform_int_distribution die(1,6);
+
+int val = die(mt);
+
+std::normal_distribution<> norm(mean, stdev);
+
+double val2 = norm(mt);
+
+
+#Homework:
+
+Create a task class
+write timings into the class, start and end times.
+contains bursts of cpu and IO
+CPU contains duration and time left
+IO contains duration and device
+
+task: (start with cpu, X amount of (io cpu) pairs then term)
+	cpu
+	io
+	cpu
+	io
+	cpu
+	term
+
+Event Queue class
+a FIFO structure of events.
+different events:
+	New Task
+		cpu or IO, task creation params
+
+	cpu done
+		
+	IO done
+
+	Simulation done
+
+wait queue
+ready queue
+io queue
