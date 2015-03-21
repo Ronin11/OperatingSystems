@@ -1,0 +1,14 @@
+PROGRAM USAGE:
+ to modify the desired values use the following switches:
+  -f to modify the (float)frequency. 1 being the max.
+  -c to modify the number of (int)cpus.
+  -i to modify the number of (int)ios.
+  -s to modify the (float)cost of a context switch.
+  -t to modify the task mix. 1 being the max.
+
+These can be in any order, as long as they follow the following structure:
+	-switch value
+	(EX: -f 0.5)
+
+The runtime variable in the main.cpp file controls how long the simulation runs. At its current state, 1000, it takes 30-60 seconds to run.
+Feel free to change the variable, but it seems to provide good data where it is.
