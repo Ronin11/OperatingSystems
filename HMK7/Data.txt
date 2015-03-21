@@ -1,0 +1,86 @@
+root@A01383689:~/School/OperatingSystems/HMK7# ./HMK7.out -p 0
+Latency: 
+	Average: 454.502
+	Minimum: 27.0651
+	Maximum: 1048.08
+	StdDev: 212.025
+Response Time: 
+	Average: 422.58
+	Minimum: 7.95485
+	Maximum: 952.015
+	StdDev: 211.959
+Utilization: 
+	Average: 0.100311
+	Minimum: 0.1
+	Maximum: 0.433333
+	StdDev: 0.100827
+Throughput: 
+	Average: 0.454502
+	Minimum: 0.0270651
+	Maximum: 1.04808
+	StdDev: 0.501069
+root@A01383689:~/School/OperatingSystems/HMK7# ./HMK7.out -p 1
+Latency: 
+	Average: 509.053
+	Minimum: 38.9339
+	Maximum: 997.59
+	StdDev: 236.934
+Response Time: 
+	Average: 477.554
+	Minimum: 7.97811
+	Maximum: 953.79
+	StdDev: 235.141
+Utilization: 
+	Average: 0.100651
+	Minimum: 0.1
+	Maximum: 0.433333
+	StdDev: 0.101721
+Throughput: 
+	Average: 0.509053
+	Minimum: 0.0389339
+	Maximum: 0.99759
+	StdDev: 0.560537
+root@A01383689:~/School/OperatingSystems/HMK7# ./HMK7.out -p 2
+Latency: 
+	Average: 205.667
+	Minimum: 0
+	Maximum: 707.723
+	StdDev: 238.854
+Response Time: 
+	Average: 1.13978
+	Minimum: 0
+	Maximum: 12.5376
+	StdDev: 3.64556
+Utilization: 
+	Average: 0.166667
+	Minimum: 0.1
+	Maximum: 0.433333
+	StdDev: 0.213437
+Throughput: 
+	Average: 0.205667
+	Minimum: 0
+	Maximum: 0.707723
+	StdDev: 0.314764
+root@A01383689:~/School/OperatingSystems/HMK7# ./HMK7.out -p 3
+Latency: 
+	Average: 167.219
+	Minimum: 4.63812
+	Maximum: 757.043
+	StdDev: 268.894
+Response Time: 
+	Average: 0
+	Minimum: 0
+	Maximum: 0
+	StdDev: 0
+Utilization: 
+	Average: 0.12381
+	Minimum: 0.1
+	Maximum: 0.433333
+	StdDev: 0.15066
+Throughput: 
+	Average: 0.167219
+	Minimum: 0.00463812
+	Maximum: 0.757043
+	StdDev: 0.316007
+root@A01383689:~/School/OperatingSystems/HMK7# 
+
