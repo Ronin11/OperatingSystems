@@ -1,0 +1,18 @@
+PROGRAM USAGE:
+ to modify the desired values use the following switches:
+  -f to modify the (float)frequency. 1 being the max. Default is 0.5.
+  -c to modify the number of (int)cpus. Default is 1.
+  -i to modify the number of (int)ios. Default is 1.
+  -s to modify the (float)cost of a context switch. Default is 0.0.
+  -t to modify the task mix. 1 being the max. Default is 0.5.
+  -q to modify the quantum, default is 100.
+  -p to modify the scheduler, default is 0. (0 - FIFO, 1 - Round Robin, 2 - SJF, 3 - Approx. SJF) 
+  -g to modify the page size. Default is 10, anything less than 5 could thrash.
+  -m to modify the page fault penalty. Default is 1.0.
+
+These can be in any order, as long as they follow the following structure:
+	-switch value
+	(EX: -f 0.5)
+
+The runtime variable in the main.cpp file controls how long the simulation runs. At its current state, 1000, it takes 30-60 seconds to run.
+Feel free to change the variable, but it seems to provide good data where it is.

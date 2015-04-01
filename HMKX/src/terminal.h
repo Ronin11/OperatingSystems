@@ -12,13 +12,6 @@
 #include<vector>
 #include<algorithm>
 
- struct{
- 	std::string command;
- 	std::string output;
- 	std::string input;
-
- }pipeData;
-
 std::vector<std::string> parse(std::string input){
 	std::istringstream iss(input);
 	std::vector<std::string> args;
@@ -31,14 +24,17 @@ std::vector<std::string> parse(std::string input){
 
 }
 
-int switchVal(std::vector<std::string> input){
-
-std::string s = input[0];
-std::transform(s.begin(), s.end(), s.begin(), ::tolower);
-for(int i = 0; i < input.size(); i++){
-		if(input[i] == "<" || input[i] == ">" || input[i] == "|")
-			return 4;
+bool checkForRedirection(std::vector<std::string> input){
+	for(int i = 0; i < input.size(); i++){
+		if(input[i] == '<' || input[i] == '>' || input[i] == '|')
+			return true;
 	}
+	else
+		return false;
+}
+
+int switchVal(std::string s){
+std::transform(s.begin(), s.end(), s.begin(), ::tolower);
 if(s == "quit" || s == "q" || s == "exit")
 	return 0;
 else if(s == "history")
@@ -48,7 +44,7 @@ else if(s == "^")
 else if(s == "ptime")
 	return 3;
 else
-	return 6;
+	return 5;
 
 }
 
